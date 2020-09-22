@@ -2,27 +2,21 @@ import  React, { Component } from "react";
 import Wrapper from "./Wrapper";
 import /*Redux, */{ createStore } from "redux";
 import /*ReactRedux,*/ { Provider, connect } from "react-redux";
-import { QUOTES } from "../data/quotes";
 
+
+//Action to dispatch
 const NEW_NOTE = "NEW_NOTE";
-
-function getRandomItem(array){
-    let length =  array.length;
-    let randomIndex = Math.floor(Math.random() * length);
-    return array[randomIndex];
-}
 
 function quotesReducer(state = {}, action){
     switch(action.type){
        case NEW_NOTE:
-           console.log(QUOTES);
-           return getRandomItem(QUOTES);
+              return action.newQuote;
        default: 
            return state;
     }
 }
 
-const changeQuote = ()=>({type: NEW_NOTE});
+const changeQuote = quote=>({type: NEW_NOTE, newQuote: quote});
 
 const store = createStore(quotesReducer);
 
@@ -34,8 +28,8 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
-        changesQuote:()=>{
-            dispatch(changeQuote())
+        changesQuote:(quote)=>{
+            dispatch(changeQuote(quote));
         }
     }
 }

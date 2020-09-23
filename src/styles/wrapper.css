@@ -43,7 +43,7 @@
     align-items: baseline;
 }
 
-#new-quote-btn, #tweet-quote{
+.new-quote-btn, #tweet-quote{
     margin: 1rem 1.4rem;
     cursor: pointer;
     font-size: 1rem;
@@ -57,15 +57,15 @@
     color:  #1b98e6;
 }
 
-#new-quote-btn {
+.new-quote-btn {
     border: none;
     border-radius: 4px;
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.911);
     font-weight: 400;
-    padding: 0.2rem 0.4rem;
+    padding: 0.4rem 0.8rem;
     outline: none;
 }
-#new-quote-btn:hover{
+.new-quote-btn:hover{
     color: white;
 }

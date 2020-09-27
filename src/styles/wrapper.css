@@ -1,8 +1,6 @@
 #quote-box {
     width: fit-content;
     max-width: 60vw;
-    height: fit-content;
-    max-height: 60vh;
     margin: auto;
     position: relative;
     top: 50vh;
@@ -11,6 +9,12 @@
     border-radius: 4px;
     background-color: white;
     box-shadow: 1px 2px 8px rgba(233, 232, 232, 0.938);
+}
+
+@media (max-width: 400px){
+    #quote-box {
+        max-width: 90%;
+    }
 }
 
 #text {

@@ -50,7 +50,7 @@ class Wrapper extends Component {
               <h1 id="text" style={style}>{quote}</h1>
               <p id="author">{author}</p>
             <div className="container-options">
-                 <a id="tweet-quote" href={`twitter.com/intent/${quote}`} target="_blank">Twitter</a>
+                 <a id="tweet-quote" href={`twitter.com/intent/tweet`} target="_blank">Twitter</a>
                  <NewQuoteButton onClick={this.newQuote} color={this.state.color}/>
             </div>   
           </div>
@@ -62,7 +62,8 @@ function NewQuoteButton (props){
     return (
        <button 
              onClick={props.onClick} 
-             id="new-quote-btn"
+             id="new-quote"
+             className="new-quote-btn"
              style={{backgroundColor: props.color}}>
              New
        </button>

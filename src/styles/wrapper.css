@@ -7,16 +7,16 @@
     position: relative;
     top: 50vh;
     transform: translateY(-50%);
-    
+    padding: .5rem;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 1px 2px 8px rgba(233, 232, 232, 0.938);
 }
 
 #text {
     position: relative;
     font-family: 'Courier New', Courier, monospace;
-    opacity: 0.8;
-}
-#text::first-letter {
-    opacity: 1;
+    
 }
 #text::before, #text::after{
     content: "\"";
@@ -65,7 +65,9 @@
     font-weight: 400;
     padding: 0.4rem 0.8rem;
     outline: none;
+    opacity: 0.7;
 }
 .new-quote-btn:hover{
     color: white;
+    opacity: 0.9;
 }
